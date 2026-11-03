@@ -433,6 +433,32 @@ svg .an2{font-family:var(--sans);font-size:17px;fill:var(--mut)}
 .s-mkt .ir span{text-align:left;font-size:21px}
 .s-mkt .idx p{font-size:24px;margin-bottom:8px}
 
+/* interactive S&P chart */
+.s-forty .int{cursor:default}
+.s-forty .ctop{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.s-forty .ctop .ch{margin:0}
+.s-forty .zoom{display:flex;align-items:center;gap:6px;padding:5px;border-radius:999px;background:rgba(14,90,88,.06);box-shadow:inset 0 0 0 1px rgba(14,90,88,.08)}
+.s-forty .zoom span{font-size:15px;font-weight:600;color:var(--mut);padding:0 10px 0 12px}
+.s-forty .zoom button{font:600 17px var(--sans);color:var(--mut);background:transparent;border:0;border-radius:999px;padding:9px 18px;cursor:pointer;transition:background .3s var(--ease),color .3s var(--ease),box-shadow .3s var(--ease)}
+.s-forty .zoom button:hover{color:var(--ink);background:rgba(255,255,255,.8)}
+.s-forty .zoom button.on{color:#fff;background:linear-gradient(160deg,#2fb3ae,#0b6f6d);box-shadow:0 8px 18px -8px rgba(14,124,122,.7)}
+.s-forty .spwrap{position:relative;flex:1;min-height:0;margin-top:6px}
+.s-forty .spwrap svg{position:absolute;inset:0;width:100%;height:100%}
+.s-forty svg .grid.zero{stroke:var(--gry)}
+.s-forty .b6{transition:opacity .25s ease}
+.s-forty .b6.dim{opacity:.32}
+.s-forty .guide{stroke:var(--ink);stroke-width:1.2;stroke-dasharray:4 5;opacity:0;transition:opacity .2s}
+.s-forty .guide.on{opacity:.5}
+.s-forty .fade{opacity:0}
+.active .s-forty .fade,.s-forty.active .fade{animation:fadeIn .6s var(--ease) .7s both}
+@keyframes fadeIn{to{opacity:1}}
+#sptip{position:absolute;top:0;transform:translate(-50%,-6px);pointer-events:none;opacity:0;padding:10px 16px;border-radius:12px;background:#fff;box-shadow:0 0 0 1px rgba(14,90,88,.1),0 16px 30px -14px rgba(14,60,62,.45);display:flex;gap:12px;align-items:baseline;white-space:nowrap;transition:opacity .2s,left .12s var(--ease)}
+#sptip.on{opacity:1}
+#sptip b{font-size:22px}
+#sptip span{font-size:22px;font-weight:800}
+.s-forty .st b.pop{animation:numPop .6s var(--ease)}
+@keyframes numPop{0%{opacity:.2;transform:translateY(8px)}100%{opacity:1;transform:none}}
+
 #bar{position:fixed;left:0;right:0;bottom:0;height:4px;background:transparent;z-index:5}
 #bar i{display:block;height:100%;background:var(--tea);width:0;transition:width .4s var(--ease)}
 
@@ -520,13 +546,16 @@ svg .an2{font-family:var(--sans);font-size:17px;fill:var(--mut)}
 <section class="slide s-forty">
   <header class="hd"><div class="kicker fx">The S&amp;P 500</div><h2 class="split">40 years of <em>ups and downs</em></h2></header>
   <div class="bd">
-  <div class="card plot fx" style="--d:.15s"><div class="ch">Yearly total return, 1986 to 2025</div><svg viewBox="0 0 1240 560"><line class="grid" x1="70" x2="1230" y1="510.0" y2="510.0"/><text class="ax" x="58" y="516.0" text-anchor="end">-40%</text><line class="grid" x1="70" x2="1230" y1="397.5" y2="397.5"/><text class="ax" x="58" y="403.5" text-anchor="end">-20%</text><line class="grid" x1="70" x2="1230" y1="285.0" y2="285.0"/><text class="ax" x="58" y="291.0" text-anchor="end">0%</text><line class="grid" x1="70" x2="1230" y1="172.5" y2="172.5"/><text class="ax" x="58" y="178.5" text-anchor="end">+20%</text><line class="grid" x1="70" x2="1230" y1="60.0" y2="60.0"/><text class="ax" x="58" y="66.0" text-anchor="end">+40%</text><rect class="b6 up gr" style="--d:0.25s" x="73.0" y="180.0" width="23.0" height="105.0" rx="2"/><rect class="b6 up gr" style="--d:0.27s" x="102.0" y="255.5" width="23.0" height="29.5" rx="2"/><rect class="b6 up gr" style="--d:0.29s" x="131.0" y="191.6" width="23.0" height="93.4" rx="2"/><rect class="b6 up gr" style="--d:0.31s" x="160.0" y="106.7" width="23.0" height="178.3" rx="2"/><rect class="b6 dn grd" style="--d:0.33s" x="189.0" y="285.0" width="23.0" height="17.4" rx="2"/><rect class="b6 up gr" style="--d:0.35s" x="218.0" y="113.6" width="23.0" height="171.4" rx="2"/><rect class="b6 up gr" style="--d:0.37s" x="247.0" y="242.1" width="23.0" height="42.9" rx="2"/><rect class="b6 up gr" style="--d:0.39s" x="276.0" y="228.3" width="23.0" height="56.7" rx="2"/><rect class="b6 up gr" style="--d:0.41s" x="305.0" y="277.6" width="23.0" height="7.4" rx="2"/><rect class="b6 up gr" style="--d:0.43s" x="334.0" y="73.6" width="23.0" height="211.4" rx="2"/><rect class="b6 up gr" style="--d:0.45s" x="363.0" y="155.8" width="23.0" height="129.2" rx="2"/><rect class="b6 up gr" style="--d:0.47s" x="392.0" y="97.3" width="23.0" height="187.7" rx="2"/><rect class="b6 up gr" style="--d:0.49s" x="421.0" y="124.2" width="23.0" height="160.8" rx="2"/><rect class="b6 up gr" style="--d:0.51s" x="450.0" y="166.7" width="23.0" height="118.3" rx="2"/><rect class="b6 dn grd" style="--d:0.53s" x="479.0" y="285.0" width="23.0" height="51.2" rx="2"/><rect class="b6 dn grd" style="--d:0.55s" x="508.0" y="285.0" width="23.0" height="66.9" rx="2"/><rect class="b6 dn grd" style="--d:0.57s" x="537.0" y="285.0" width="23.0" height="124.3" rx="2"/><rect class="b6 up gr" style="--d:0.59s" x="566.0" y="123.7" width="23.0" height="161.3" rx="2"/><rect class="b6 up gr" style="--d:0.61s" x="595.0" y="223.8" width="23.0" height="61.2" rx="2"/><rect class="b6 up gr" style="--d:0.63s" x="624.0" y="257.4" width="23.0" height="27.6" rx="2"/><rect class="b6 up gr" style="--d:0.65s" x="653.0" y="196.2" width="23.0" height="88.8" rx="2"/><rect class="b6 up gr" style="--d:0.67s" x="682.0" y="254.1" width="23.0" height="30.9" rx="2"/><rect class="b6 dn grd" style="--d:0.69s" x="711.0" y="285.0" width="23.0" height="208.1" rx="2"/><rect class="b6 up gr" style="--d:0.71s" x="740.0" y="136.2" width="23.0" height="148.8" rx="2"/><rect class="b6 up gr" style="--d:0.73s" x="769.0" y="200.3" width="23.0" height="84.7" rx="2"/><rect class="b6 up gr" style="--d:0.75s" x="798.0" y="273.1" width="23.0" height="11.9" rx="2"/><rect class="b6 up gr" style="--d:0.77s" x="827.0" y="195.0" width="23.0" height="90.0" rx="2"/><rect class="b6 up gr" style="--d:0.79s" x="856.0" y="102.8" width="23.0" height="182.2" rx="2"/><rect class="b6 up gr" style="--d:0.81s" x="885.0" y="208.0" width="23.0" height="77.0" rx="2"/><rect class="b6 up gr" style="--d:0.83s" x="914.0" y="277.2" width="23.0" height="7.8" rx="2"/><rect class="b6 up gr" style="--d:0.85s" x="943.0" y="217.7" width="23.0" height="67.3" rx="2"/><rect class="b6 up gr" style="--d:0.87s" x="972.0" y="162.2" width="23.0" height="122.8" rx="2"/><rect class="b6 dn grd" style="--d:0.89s" x="1001.0" y="285.0" width="23.0" height="24.6" rx="2"/><rect class="b6 up gr" style="--d:0.91s" x="1030.0" y="107.9" width="23.0" height="177.1" rx="2"/><rect class="b6 up gr" style="--d:0.93s" x="1059.0" y="181.5" width="23.0" height="103.5" rx="2"/><rect class="b6 up gr" style="--d:0.95s" x="1088.0" y="123.5" width="23.0" height="161.5" rx="2"/><rect class="b6 dn grd" style="--d:0.97s" x="1117.0" y="285.0" width="23.0" height="101.9" rx="2"/><rect class="b6 up gr" style="--d:0.99s" x="1146.0" y="137.1" width="23.0" height="147.9" rx="2"/><rect class="b6 up gr" style="--d:1.01s" x="1175.0" y="144.3" width="23.0" height="140.7" rx="2"/><rect class="b6 up gr" style="--d:1.03s" x="1204.0" y="184.4" width="23.0" height="100.6" rx="2"/><text class="ax" x="84.5" y="546" text-anchor="middle">1986</text><text class="ax" x="345.5" y="546" text-anchor="middle">1995</text><text class="ax" x="635.5" y="546" text-anchor="middle">2005</text><text class="ax" x="925.5" y="546" text-anchor="middle">2015</text><text class="ax" x="1215.5" y="546" text-anchor="middle">2025</text><line class="lead" x1="113.5" x2="113.5" y1="44" y2="249.5"/><line class="lead" x1="1070.5" x2="1070.5" y1="44" y2="175.5"/><g class="fx" style="--d:1.20s"><text class="an" x="103.5" y="14.0" text-anchor="start">1987 crash</text><text class="an2" x="103.5" y="36.0" text-anchor="start">Year still ended up</text></g><g class="fx" style="--d:1.32s"><text class="an" x="1080.5" y="14.0" text-anchor="end">COVID, 2020</text><text class="an2" x="1080.5" y="36.0" text-anchor="end">Fell 34%, ended up 18%</text></g><g class="fx" style="--d:1.44s"><text class="an" x="519.5" y="439.3" text-anchor="middle">Dot-com bust</text><text class="an2" x="519.5" y="461.3" text-anchor="middle">3 down years in a row</text></g><g class="fx" style="--d:1.56s"><text class="an" x="745.0" y="453.8" text-anchor="start">Financial crisis</text><text class="an2" x="745.0" y="475.8" text-anchor="start">Worst year: -37%</text></g><g class="fx" style="--d:1.68s"><text class="an" x="1128.5" y="416.9" text-anchor="middle">Rate hikes</text><text class="an2" x="1128.5" y="438.9" text-anchor="middle">-18%</text></g></svg></div>
-  <div class="stats">
-    <div class="card st fx" style="--d:0.40s"><span class="kk">Up years</span><b>33 of 40</b><span>Never more than 3 down years in a row</span></div>
-    <div class="card st fx" style="--d:0.47s"><span class="kk">Average growth</span><b>11.5% a year</b><span>Compounded, with dividends reinvested</span></div>
-    <div class="card st hi fx" style="--d:0.54s"><span class="kk">$10,000 in 1986</span><b>$769K</b><span>by the end of 2025</span></div>
+  <div class="card plot int fx" id="sp" style="--d:.15s" data-sp='{"y":[1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],"r":[18.67,5.25,16.61,31.69,-3.1,30.47,7.62,10.08,1.32,37.58,22.96,33.36,28.58,21.04,-9.1,-11.89,-22.1,28.68,10.88,4.91,15.79,5.49,-37.0,26.46,15.06,2.11,16.0,32.39,13.69,1.38,11.96,21.83,-4.38,31.49,18.4,28.71,-18.11,26.29,25.02,17.88],"notes":[[1987,"1987 crash","Year still ended up","top"],[2020,"COVID, 2020","Fell 34%, ended up 18%","top"],[2001,"Dot-com bust","3 down years in a row","below"],[2008,"Financial crisis","Worst year: -37%","side"],[2022,"Rate hikes","-18%","below"]]}'>
+    <div class="ctop"><div class="ch">Yearly total return, <span id="sprange">1986 to 2025</span></div><div class="zoom"><span>Zoom</span><button data-n="5">5Y</button><button data-n="10">10Y</button><button data-n="20">20Y</button><button data-n="30">30Y</button><button data-n="40" class=on>All</button></div></div>
+    <div class="spwrap"><svg id="spsvg" viewBox="0 0 1240 540"></svg><div id="sptip"></div></div>
+  </div>
+  <div class="stats nocount">
+    <div class="card st fx" style="--d:0.40s"><span class="kk">Up years</span><b id="spup">33 of 40</b><span id="spstreak">Longest down streak: 3 years</span></div>
+    <div class="card st fx" style="--d:0.47s"><span class="kk">Average growth</span><b id="spavg">11.5% a year</b><span>Compounded, with dividends reinvested</span></div>
+    <div class="card st hi fx" style="--d:0.54s"><span class="kk" id="spfrom">$10,000 in 1986</span><b id="spgrow">$769K</b><span>by the end of 2025</span></div>
   </div></div>
-  <footer class="ft"><span>Investing 101</span><span class="src">S&amp;P 500 total return. You cannot invest directly in an index. Past performance does not guarantee future results.</span><span class="pn"></span></footer>
+  <footer class="ft"><span>Investing 101</span><span class="src">S&amp;P 500 total return. Hover any bar to see its year. You cannot invest directly in an index. Past performance does not guarantee future results.</span><span class="pn"></span></footer>
 </section>
 <section class="slide s-moves">
   <header class="hd"><div class="kicker fx">The basics</div><h2 class="split">What makes it go <em>up or down?</em></h2></header>
@@ -781,6 +810,7 @@ const NUMS = '.call>b,.st b,.tl b,.s-stand .bc span,.s-infl .ib span,.s-div .r2 
 function countUp(s) {
   if (RM) return;
   s.querySelectorAll(NUMS).forEach(el => {
+    if (el.closest('.nocount')) return;
     const src = el.dataset.src || (el.dataset.src = el.textContent);
     const m = src.match(/^([^0-9]*)([0-9][0-9,]*(?:\.[0-9]+)?)(.*)$/);
     if (!m) return;
@@ -796,6 +826,97 @@ function countUp(s) {
     requestAnimationFrame(tick);
   });
 }
+
+// interactive S&P 500 chart: zoom buttons, hover a bar for its year, stats follow the zoom
+(function () {
+  const box = document.getElementById('sp');
+  if (!box) return;
+  const D = JSON.parse(box.dataset.sp), svg = document.getElementById('spsvg'), tip = document.getElementById('sptip');
+  const W = 1240, H = 540, L = 70, R = 14, T = 64, B = 46, NS = 'http://www.w3.org/2000/svg';
+  const zy = r => T + (40 - r) / 80 * (H - T - B);
+  const el = (tag, at, txt) => { const e = document.createElementNS(NS, tag); for (const k in at) e.setAttribute(k, at[k]); if (txt != null) e.textContent = txt; return e; };
+  const pct = r => (r > 0 ? '+' : '') + r.toFixed(2) + '%';
+  const $ = id => document.getElementById(id);
+  let view = null;
+
+  function stats(ys, rs) {
+    const n = rs.length, up = rs.filter(r => r > 0).length;
+    let streak = 0, run = 0;
+    rs.forEach(r => { run = r < 0 ? run + 1 : 0; streak = Math.max(streak, run); });
+    const grow = rs.reduce((v, r) => v * (1 + r / 100), 10000), cagr = Math.pow(grow / 10000, 1 / n) - 1;
+    $('spup').textContent = `${up} of ${n}`;
+    $('spstreak').textContent = streak ? `Longest down streak: ${streak} year${streak > 1 ? 's' : ''}` : 'No down years in this stretch';
+    $('spavg').textContent = `${(cagr * 100).toFixed(1)}% a year`;
+    $('spfrom').textContent = `$10,000 in ${ys[0]}`;
+    $('spgrow').textContent = grow >= 1e6 ? `$${(grow / 1e6).toFixed(2)}M` : `$${Math.round(grow / 1000)}K`;
+    $('sprange').textContent = `${ys[0]} to ${ys[n - 1]}`;
+    box.parentElement.querySelectorAll('.stats .st b').forEach(c => { c.classList.remove('pop'); void c.offsetWidth; c.classList.add('pop'); });
+  }
+
+  function draw(n) {
+    const ys = D.y.slice(-n), rs = D.r.slice(-n), bw = (W - L - R) / n, gap = Math.min(8, bw * .18);
+    const cx = i => L + i * bw + bw / 2;
+    svg.textContent = '';
+    [-40, -20, 0, 20, 40].forEach(t => {
+      svg.append(el('line', { class: 'grid' + (t === 0 ? ' zero' : ''), x1: L, x2: W - R, y1: zy(t), y2: zy(t) }));
+      svg.append(el('text', { class: 'ax', x: L - 12, y: zy(t) + 6, 'text-anchor': 'end' }, (t > 0 ? '+' : '') + t + '%'));
+    });
+    const step = n <= 5 ? 1 : n <= 10 ? 1 : n <= 20 ? 2 : 5;
+    ys.forEach((y, i) => { if ((ys[n - 1] - y) % step === 0) svg.append(el('text', { class: 'ax', x: cx(i), y: H - 12, 'text-anchor': 'middle' }, y)); });
+    const bars = el('g', {});
+    rs.forEach((r, i) => {
+      const top = r >= 0 ? zy(r) : zy(0), h = Math.max(Math.abs(zy(r) - zy(0)), 2);
+      bars.append(el('rect', { class: `b6 ${r >= 0 ? 'up gr' : 'dn grd'}`, style: `--d:${(i * Math.min(.03, .9 / n)).toFixed(3)}s`, x: L + i * bw + gap / 2, y: top, width: bw - gap, height: h, rx: Math.min(4, bw / 8) }));
+    });
+    svg.append(bars);
+    if (n <= 10) rs.forEach((r, i) => svg.append(el('text', { class: 'vl sm fade', x: cx(i), y: r >= 0 ? zy(r) - 10 : zy(r) + 24, 'text-anchor': 'middle' }, pct(r).replace('.00', ''))));
+    else D.notes.forEach(([y, t1, t2, where]) => {
+      const i = ys.indexOf(y);
+      if (i < 0) return;
+      const r = rs[i], g = el('g', { class: 'fade' });
+      let x = cx(i), ty, anchor = 'middle';
+      if (where === 'top') {
+        g.append(el('line', { class: 'lead', x1: x, x2: x, y1: 44, y2: zy(r) - 6 }));
+        ty = 14; anchor = i < n / 2 ? 'start' : 'end'; x += anchor === 'start' ? -10 : 10;
+      } else if (where === 'side') { ty = zy(-30); x += bw / 2 + 8; anchor = 'start'; }
+      else ty = zy(r) + 30;
+      g.append(el('text', { class: 'an', x, y: ty, 'text-anchor': anchor }, t1));
+      g.append(el('text', { class: 'an2', x, y: ty + 22, 'text-anchor': anchor }, t2));
+      svg.append(g);
+    });
+    const guide = el('line', { class: 'guide', x1: 0, x2: 0, y1: T - 20, y2: H - B });
+    svg.append(guide);
+    const hit = el('rect', { x: L, y: 0, width: W - L - R, height: H - B, fill: 'transparent' });
+    svg.append(hit);
+    view = { ys, rs, bw, cx, guide, n };
+    stats(ys, rs);
+  }
+
+  function hover(e) {
+    if (!view) return;
+    const p = svg.getBoundingClientRect(), sx = (e.touches ? e.touches[0].clientX : e.clientX) - p.left;
+    const x = sx / p.width * W, i = Math.max(0, Math.min(view.n - 1, Math.floor((x - L) / view.bw)));
+    const r = view.rs[i], gx = view.cx(i);
+    view.guide.setAttribute('x1', gx); view.guide.setAttribute('x2', gx); view.guide.classList.add('on');
+    svg.querySelectorAll('.b6').forEach((b, k) => b.classList.toggle('dim', k !== i));
+    tip.innerHTML = `<b>${view.ys[i]}</b><span class="${r >= 0 ? 'up' : 'dn'}">${pct(r)}</span>`;
+    tip.style.left = (gx / W * 100) + '%';
+    tip.classList.add('on');
+  }
+  function leave() {
+    if (!view) return;
+    view.guide.classList.remove('on'); tip.classList.remove('on');
+    svg.querySelectorAll('.b6').forEach(b => b.classList.remove('dim'));
+  }
+  svg.addEventListener('mousemove', hover);
+  svg.addEventListener('touchmove', hover, { passive: true });
+  svg.addEventListener('mouseleave', leave);
+  box.querySelectorAll('.zoom button').forEach(b => b.addEventListener('click', () => {
+    box.querySelectorAll('.zoom button').forEach(x => x.classList.toggle('on', x === b));
+    leave(); draw(+b.dataset.n);
+  }));
+  draw(40);
+})();
 
 function fit() {
   const s = Math.min(innerWidth / 1920, innerHeight / 1080);
@@ -829,7 +950,7 @@ addEventListener('keydown', e => {
   else if (e.key === 'End') go(slides.length - 1);
   else if (e.key === 'f' || e.key === 'F') document.fullscreenElement ? document.exitFullscreen() : root.requestFullscreen();
 });
-addEventListener('click', e => go(idx + (e.clientX > innerWidth / 3 ? 1 : -1)));
+addEventListener('click', e => { if (e.target.closest('.int')) return; go(idx + (e.clientX > innerWidth / 3 ? 1 : -1)); });
 let tx = null;
 addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, { passive: true });
 addEventListener('touchend', e => {
