@@ -589,6 +589,13 @@ svg .an2{font-family:var(--sans);font-size:17px;fill:var(--mut)}
 .s-dca svg .vl.dnf{fill:var(--rst)}
 .s-dca svg .vl.sm2{font-size:18px;fill:var(--ink)}
 
+.s-debt .tsm{font-size:24px;font-weight:800;color:var(--rst);padding:4px 10px;border-radius:8px;background:rgba(192,87,62,.07)}
+.s-debt .vs2 .all{display:block;margin-bottom:6px;color:var(--tea);letter-spacing:.06em;white-space:nowrap}
+.s-debt .vs2 .two{grid-template-columns:1fr auto 1fr;align-items:center}
+.s-debt .vs2 .two>div+div{border-left:0;padding-left:0}
+.s-debt .vs2 .mid{font-family:var(--serif);font-style:italic;font-size:34px;color:var(--mut)}
+.s-debt .vs2 b.med{font-style:italic}
+
 #bar{position:fixed;left:0;right:0;bottom:0;height:4px;background:transparent;z-index:5}
 #bar i{display:block;height:100%;background:var(--tea);width:0;transition:width .4s var(--ease)}
 
@@ -682,13 +689,13 @@ svg .an2{font-family:var(--sans);font-size:17px;fill:var(--mut)}
 <section class="slide s-debt">
   <header class="hd"><div class="kicker fx">Why this matters</div><h2 class="split">The U.S. debt <em>crisis</em></h2></header>
   <div class="bd">
-  <div class="clocks"><div class="card clock fx" style="--d:0.20s"><div><span class="cl">U.S. national debt</span><span class="cs">+$63,797 every second</span></div><b class="tick" data-v="40585033996170" data-r="63797.089307" data-dec="0" data-t0="1793749369184">$40,585,033,996,170</b></div><div class="card clock hh fx" style="--d:0.27s"><span class="cl">Average consumer debt</span><b class="tick" data-v="139476.22227168188" data-r="0.00015469" data-dec="2" data-t0="1793749369184">$139,476.22</b><span class="cs">per household, mortgage plus consumer debt</span><div class="hhtot"><span>U.S. household debt</span><span class="tick tsm" data-v="18800000000000.0" data-r="20850.7618" data-dec="0" data-t0="1793749369184">$18,800,000,000,000</span></div><div class="parts"><i>Mortgage <em>$13.1T</em></i><i>Auto loans <em>$1.71T</em></i><i>Student loans <em>$1.65T</em></i><i>Credit cards <em>$1.26T</em></i></div></div><div class="card clock fx" style="--d:0.34s"><span class="cl">Credit card debt</span><b class="tick" data-v="1340766088350" data-r="2124.315677" data-dec="0" data-t0="1793749369184">$1,340,766,088,350</b><span class="cs">$1.3 trillion</span></div></div>
+  <div class="clocks"><div class="card clock fx" style="--d:0.20s"><div><span class="cl">U.S. national debt</span><span class="cs">+$63,797 every second</span></div><b class="tick" data-v="40585033996170" data-r="63797.089307" data-dec="0" data-t0="1793749943830">$40,585,033,996,170</b></div><div class="card clock hh fx" style="--d:0.27s"><span class="cl">Average consumer debt</span><b class="tick" data-v="139476.22227168188" data-r="0.00015469" data-dec="2" data-t0="1793749943830">$139,476.22</b><span class="cs">per household, mortgage plus consumer debt</span><div class="hhtot"><span>U.S. household debt</span><span class="tsm">$18.8T</span></div><div class="parts"><i>Mortgage <em>$13.1T</em></i><i>Auto loans <em>$1.71T</em></i><i>Student loans <em>$1.65T</em></i><i>Credit cards <em>$1.26T</em></i></div></div><div class="card clock fx" style="--d:0.34s"><span class="cl">Average consumer debt per household</span><b class="tick" data-v="42288.003561095036" data-r="0.00004690" data-dec="2" data-t0="1793749943830">$42,288.00</b><span class="cs">Auto loans, student loans, and credit cards. Mortgage not included.</span></div></div>
   <div class="vsrow">
-    <div class="card vs1 fx" style="--d:.7s"><span class="kk">Credit card debt per cardholder</span><b class="dn">$8,422</b></div>
+    <div class="card vs1 fx" style="--d:.7s"><span class="kk">Credit card debt per household</span><b class="dn">$9,348</b></div>
     <div class="vsx fx" style="--d:.8s">vs.</div>
-    <div class="card vs2 fx" style="--d:.9s"><div class="two"><div><span class="kk">Average 401(k) savings</span><b class="up">$167,970</b></div><div><span class="kk">Median 401(k) savings</span><b class="up">$44,115</b></div></div></div>
+    <div class="card vs2 fx" style="--d:.9s"><span class="kk all">All retirement accounts: 401(k), 403(b), 457, TSP, IRA, SEP</span><div class="two"><div><span class="kk">Average</span><b class="up">$451,118</b></div><i class="mid">vs.</i><div><span class="kk">Median</span><b class="up med">$106,000</b></div></div></div>
   </div></div>
-  <footer class="ft"><span>Investing 101</span><span class="src">Clocks: usdebtclock.org and the Federal Reserve Bank of New York (household debt, Q2 2026), running estimates. 401(k): Vanguard, How America Saves 2026.</span><span class="pn"></span></footer>
+  <footer class="ft"><span>Investing 101</span><span class="src">Clocks: usdebtclock.org and the Federal Reserve Bank of New York (household debt, Q2 2026), running estimates. Household debt per household: NY Fed total divided by 134.8M households (Census). Retirement accounts: Federal Reserve, 2025 Survey of Consumer Finances, families with any account.</span><span class="pn"></span></footer>
 </section>
 <section class="slide s-mkt">
   <header class="hd"><div class="kicker fx">The basics</div><h2 class="split">What is the <em>“stock market”</em>?</h2></header>
