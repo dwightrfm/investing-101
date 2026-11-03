@@ -470,6 +470,46 @@ svg .an2{font-family:var(--sans);font-size:17px;fill:var(--mut)}
 
 #spavg{white-space:nowrap}
 
+/* up or down: titles only */
+.s-moves .bd{grid-template-rows:1fr auto}
+.s-moves .grid8{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:1fr 1fr;gap:22px}
+.s-moves .grid8 .mv{justify-content:center;gap:14px;padding:30px 32px}
+.s-moves .grid8 .mv .ic{width:46px;height:46px}
+.s-moves .grid8 .mv b{font-size:34px;line-height:1.15;letter-spacing:-.01em}
+.s-moves .grid8 .mv span{font-size:24px;color:var(--tea);font-weight:600}
+
+/* anything and everything */
+.s-any{align-items:center;justify-content:center}
+.s-any .anyc{position:relative;z-index:2;text-align:center}
+.s-any .kicker{justify-content:center}
+.s-any .pre{font-family:var(--serif);font-style:italic;font-size:66px;color:var(--mut);margin:28px 0 0}
+.s-any h2.mega{font-family:var(--serif);font-weight:600;font-size:196px;line-height:.98;letter-spacing:-.025em;margin:4px 0 0}
+.s-any h2.mega em{color:var(--tea);text-shadow:0 18px 40px rgba(14,124,122,.22)}
+@keyframes sheen{0%,100%{background-position:100% 0}50%{background-position:0 0}}
+.s-any .glow{position:absolute;left:50%;top:50%;width:1300px;height:760px;translate:-50% -50%;background:radial-gradient(closest-side,rgba(47,179,174,.24),transparent);animation:breathe2 6s ease-in-out infinite}
+@keyframes breathe2{50%{opacity:.55;scale:1.08}}
+.s-any .cloud{position:absolute;inset:0}
+.s-any .chipx{position:absolute;left:var(--x);top:var(--y);translate:-50% -50%}
+.s-any .chipx span{display:inline-block;padding:12px 24px;border-radius:999px;background:#fbfdfd;box-shadow:0 0 0 1px rgba(14,90,88,.1),0 14px 30px -16px rgba(14,60,62,.4);font-size:23px;will-change:transform;font-weight:600;color:var(--mut);white-space:nowrap;animation:bob 7s ease-in-out infinite}
+.s-any .chipx span.k{background:linear-gradient(160deg,#2fb3ae,#0b6f6d);color:#fff;font-size:26px;box-shadow:0 16px 32px -14px rgba(14,124,122,.6)}
+@keyframes bob{50%{transform:translateY(-12px) rotate(-1deg)}}
+
+/* debt clocks: national debt as the hero, two below, then the comparison */
+.s-debt .bd{grid-template-rows:1fr auto}
+.s-debt .clocks{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1.15fr 1fr;gap:20px}
+.s-debt .clock{display:flex;flex-direction:column;justify-content:center;gap:12px;padding:24px 32px}
+.s-debt .clock:first-child{grid-column:1/-1;flex-direction:row;align-items:center;justify-content:space-between;gap:30px}
+.s-debt .clock:first-child>div{display:flex;flex-direction:column;gap:12px}
+.s-debt .cl{align-self:flex-start;font-size:17px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:linear-gradient(160deg,#d0705a,#a9452f);padding:8px 16px;border-radius:999px}
+.s-debt .tick{font-size:52px;font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums;color:var(--rst);padding:12px 20px;border-radius:14px;background:rgba(192,87,62,.06);box-shadow:inset 0 0 0 1.5px rgba(192,87,62,.25);white-space:nowrap;align-self:flex-start}
+.s-debt .clock:first-child .tick{font-size:84px;padding:14px 28px;align-self:center}
+.s-debt .cs{font-size:21px;color:var(--mut)}
+.s-debt .vsrow{display:grid;grid-template-columns:1fr auto 1fr;gap:28px;align-items:center}
+.s-debt .vsrow .card{padding:20px 34px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.s-debt .vsrow .card .kk{font-size:17px}
+.s-debt .vsrow b{font-size:60px;font-weight:800;letter-spacing:-.03em}
+.s-debt .vsx{font-family:var(--serif);font-style:italic;font-size:54px;color:var(--tea)}
+
 #bar{position:fixed;left:0;right:0;bottom:0;height:4px;background:transparent;z-index:5}
 #bar i{display:block;height:100%;background:var(--tea);width:0;transition:width .4s var(--ease)}
 
@@ -530,6 +570,47 @@ svg .an2{font-family:var(--sans);font-size:17px;fill:var(--mut)}
   <div class="card col fx" style="--d:.25s"><div class="ch no">This series will not cover</div><ul><li class="fx" style="--d:0.60s"><svg class="ic no" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7"/></svg><span>Specific financial products</span></li><li class="fx" style="--d:0.67s"><svg class="ic no" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7"/></svg><span>Investment recommendations</span></li><li class="fx" style="--d:0.74s"><svg class="ic no" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7"/></svg><span>Non-paper assets</span></li></ul></div></div>
   <footer class="ft"><span>Investing 101</span><span class="src"></span><span class="pn"></span></footer>
 </section>
+<section class="slide s-stand">
+  <header class="hd"><div class="kicker fx">Why this matters</div><h2 class="split">Owing vs. <em>saving</em></h2></header>
+  <div class="bd">
+  <div class="card chartc fx" style="--d:.15s">
+    <div class="legend"><span><i class="debt"></i>Median debt</span><span><i class="save"></i>Median retirement savings</span></div>
+    <div class="bars"><div class="grp">
+      <div class="pair">
+        <div class="bc"><span class="fx" style="--d:0.60s">$88K</span><i class="debt gr" style="--d:0.25s;height:136px"></i></div>
+        <div class="bc"><span class="fx" style="--d:0.65s">$106K</span><i class="save gr" style="--d:0.30s;height:163px"></i></div>
+      </div><div class="gl">All ages</div></div><div class="grp">
+      <div class="pair">
+        <div class="bc"><span class="fx" style="--d:0.70s">$79K</span><i class="debt gr" style="--d:0.35s;height:122px"></i></div>
+        <div class="bc"><span class="fx" style="--d:0.75s">$30K</span><i class="save gr" style="--d:0.40s;height:46px"></i></div>
+      </div><div class="gl">20 to 40</div></div><div class="grp">
+      <div class="pair">
+        <div class="bc"><span class="fx" style="--d:0.80s">$138K</span><i class="debt gr" style="--d:0.45s;height:212px"></i></div>
+        <div class="bc"><span class="fx" style="--d:0.85s">$127K</span><i class="save gr" style="--d:0.50s;height:195px"></i></div>
+      </div><div class="gl">41 to 60</div></div><div class="grp">
+      <div class="pair">
+        <div class="bc"><span class="fx" style="--d:0.90s">$50K</span><i class="debt gr" style="--d:0.55s;height:77px"></i></div>
+        <div class="bc"><span class="fx" style="--d:0.95s">$252K</span><i class="save gr" style="--d:0.60s;height:388px"></i></div>
+      </div><div class="gl">61 and up</div></div></div>
+  </div>
+  <div class="side">
+    <div class="card call fx" style="--d:0.50s"><b>45%</b><span>of families have <strong>no retirement account</strong> at all.</span></div>
+    <div class="card call fx" style="--d:0.57s"><b>$5,000</b><span>The middle retirement balance across <strong>all</strong> families, counting the 45% with none.</span></div>
+    <div class="card call fx" style="--d:0.64s"><b>$840 a month</b><span>What $252,000 pays at a <strong>4% yearly draw.</strong></span></div>
+  </div></div>
+  <footer class="ft"><span>Investing 101</span><span class="src">Federal Reserve, 2025 Survey of Consumer Finances. Medians among families that hold each. Debt includes mortgages, cars, cards, and student loans.</span><span class="pn"></span></footer>
+</section>
+<section class="slide s-debt">
+  <header class="hd"><div class="kicker fx">Why this matters</div><h2 class="split">The U.S. debt <em>crisis</em></h2></header>
+  <div class="bd">
+  <div class="clocks"><div class="card clock fx" style="--d:0.20s"><div><span class="cl">U.S. national debt</span><span class="cs">+$63,797 every second</span></div><b class="tick" data-v="40585033996170" data-r="63797.089307" data-dec="0" data-t0="1793747847017">$40,585,033,996,170</b></div><div class="card clock fx" style="--d:0.27s"><span class="cl">Debt per taxpayer</span><b class="tick" data-v="362828" data-r="0.000583" data-dec="2" data-t0="1793747847017">$362,828.00</b><span class="cs">National debt split across 109.4M taxpayers</span></div><div class="card clock fx" style="--d:0.34s"><span class="cl">Credit card debt</span><b class="tick" data-v="1340766088350" data-r="2124.315677" data-dec="0" data-t0="1793747847017">$1,340,766,088,350</b><span class="cs">$8,422 per cardholder</span></div></div>
+  <div class="vsrow">
+    <div class="card vs1 fx" style="--d:.7s"><span class="kk">Credit card debt per cardholder</span><b class="dn">$8,422</b></div>
+    <div class="vsx fx" style="--d:.8s">vs.</div>
+    <div class="card vs2 fx" style="--d:.9s"><span class="kk">Retirement savings, typical family</span><b class="up">$5,000</b></div>
+  </div></div>
+  <footer class="ft"><span>Investing 101</span><span class="src">Clocks: usdebtclock.org running estimates as of Nov 3, 2026. Retirement savings: Federal Reserve, 2025 Survey of Consumer Finances (middle family, counting those with none).</span><span class="pn"></span></footer>
+</section>
 <section class="slide s-mkt">
   <header class="hd"><div class="kicker fx">The basics</div><h2 class="split">What is the <em>“stock market”</em>?</h2></header>
   <div class="bd">
@@ -572,39 +653,19 @@ svg .an2{font-family:var(--sans);font-size:17px;fill:var(--mut)}
 <section class="slide s-moves">
   <header class="hd"><div class="kicker fx">The basics</div><h2 class="split">What makes it go <em>up or down?</em></h2></header>
   <div class="bd">
-  <div class="grid6"><div class="card mv fx" style="--d:0.15s"><svg class="ic" viewBox="0 0 24 24"><path d="M4 19h16M7 16v-4M12 16V8M17 16v-7"/></svg><b>Company profits</b><span>Growing profits push prices up over time. Shrinking profits pull them down.</span></div><div class="card mv fx" style="--d:0.22s"><svg class="ic" viewBox="0 0 24 24"><circle cx="7.5" cy="7.5" r="2.5"/><circle cx="16.5" cy="16.5" r="2.5"/><path d="M18 6L6 18"/></svg><b>Interest rates</b><span>Higher rates make borrowing cost more and bonds more attractive. Stocks often dip.</span></div><div class="card mv fx" style="--d:0.29s"><svg class="ic" viewBox="0 0 24 24"><path d="M3 20h18M5 20V10l4-3 4 3v10M13 20v-7h6v7"/></svg><b>The economy</b><span>Jobs, wages, and spending. A strong economy usually means stronger companies.</span></div><div class="card mv fx" style="--d:0.36s"><svg class="ic" viewBox="0 0 24 24"><path d="M12 4v16M8 8h6a3 3 0 010 6h-4a3 3 0 000 6h6"/></svg><b>Inflation</b><span>Fast-rising prices squeeze profits and push rates higher.</span></div><div class="card mv fx" style="--d:0.43s"><svg class="ic" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 9h8M8 13h8M8 16h5"/></svg><b>World events</b><span>Elections, wars, pandemics, new laws. Surprises move prices fast.</span></div><div class="card mv fx" style="--d:0.50s"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M9 10h.01M15 10h.01M8.5 14.5c2 2 5 2 7 0"/></svg><b>Investor emotion</b><span>Fear and greed. People often sell in a panic and buy in a frenzy.</span></div></div>
-  <div class="band fx" style="--d:.7s"><div><span class="kk">Short run</span>News and emotion</div><div class="vs"></div><div><span class="kk">Long run</span>Company profits</div></div></div>
+  <div class="grid8"><div class="card mv fx" style="--d:0.15s"><svg class="ic" viewBox="0 0 24 24"><path d="M3 20h18M5 20v-8M9.7 20v-8M14.3 20v-8M19 20v-8M3 12h18L12 5z"/></svg><b>Politics</b></div><div class="card mv fx" style="--d:0.22s"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg><b>World events</b></div><div class="card mv fx" style="--d:0.29s"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M9 10h.01M15 10h.01M8.5 14.5c2 2 5 2 7 0"/></svg><b>Investor sentiment</b><span>News</span></div><div class="card mv fx" style="--d:0.36s"><svg class="ic" viewBox="0 0 24 24"><path d="M4 19h16M7 16v-4M12 16V8M17 16v-7"/></svg><b>Company profits</b></div><div class="card mv fx" style="--d:0.43s"><svg class="ic" viewBox="0 0 24 24"><circle cx="7.5" cy="7.5" r="2.5"/><circle cx="16.5" cy="16.5" r="2.5"/><path d="M18 6L6 18"/></svg><b>Interest rates</b></div><div class="card mv fx" style="--d:0.50s"><svg class="ic" viewBox="0 0 24 24"><path d="M3 20h18M5 20V10l4-3 4 3v10M13 20v-7h6v7"/></svg><b>Jobs, wages, and spending</b></div><div class="card mv fx" style="--d:0.57s"><svg class="ic" viewBox="0 0 24 24"><path d="M12 4v16M8 8h6a3 3 0 010 6h-4a3 3 0 000 6h6"/></svg><b>Inflation</b></div><div class="card mv fx" style="--d:0.64s"><svg class="ic" viewBox="0 0 24 24"><path d="M12 4v16M8 20h8M5 8h14M5 8l-3 6a3 3 0 006 0zM19 8l-3 6a3 3 0 006 0z"/></svg><b>Laws and regulations</b></div></div>
+  <div class="band fx" style="--d:.8s"><div><span class="kk">Short run</span>News and sentiment</div><div class="vs"></div><div><span class="kk">Long run</span>Company profits</div></div></div>
   <footer class="ft"><span>Investing 101</span><span class="src"></span><span class="pn"></span></footer>
 </section>
-<section class="slide s-stand">
-  <header class="hd"><div class="kicker fx">Where we stand</div><h2 class="split">Owing vs. <em>saving</em></h2></header>
-  <div class="bd">
-  <div class="card chartc fx" style="--d:.15s">
-    <div class="legend"><span><i class="debt"></i>Median debt</span><span><i class="save"></i>Median retirement savings</span></div>
-    <div class="bars"><div class="grp">
-      <div class="pair">
-        <div class="bc"><span class="fx" style="--d:0.60s">$88K</span><i class="debt gr" style="--d:0.25s;height:136px"></i></div>
-        <div class="bc"><span class="fx" style="--d:0.65s">$106K</span><i class="save gr" style="--d:0.30s;height:163px"></i></div>
-      </div><div class="gl">All ages</div></div><div class="grp">
-      <div class="pair">
-        <div class="bc"><span class="fx" style="--d:0.70s">$79K</span><i class="debt gr" style="--d:0.35s;height:122px"></i></div>
-        <div class="bc"><span class="fx" style="--d:0.75s">$30K</span><i class="save gr" style="--d:0.40s;height:46px"></i></div>
-      </div><div class="gl">20 to 40</div></div><div class="grp">
-      <div class="pair">
-        <div class="bc"><span class="fx" style="--d:0.80s">$138K</span><i class="debt gr" style="--d:0.45s;height:212px"></i></div>
-        <div class="bc"><span class="fx" style="--d:0.85s">$127K</span><i class="save gr" style="--d:0.50s;height:195px"></i></div>
-      </div><div class="gl">41 to 60</div></div><div class="grp">
-      <div class="pair">
-        <div class="bc"><span class="fx" style="--d:0.90s">$50K</span><i class="debt gr" style="--d:0.55s;height:77px"></i></div>
-        <div class="bc"><span class="fx" style="--d:0.95s">$252K</span><i class="save gr" style="--d:0.60s;height:388px"></i></div>
-      </div><div class="gl">61 and up</div></div></div>
+<section class="slide s-any">
+  <div class="glow"></div>
+  <div class="cloud"><div class="chipx fx" style="--x:9%;--y:13%;--d:0.50s"><span class="k" style="animation-delay:-0.0s;animation-duration:6s">Politics</span></div><div class="chipx fx" style="--x:29%;--y:9%;--d:0.57s"><span class="k" style="animation-delay:-1.7s;animation-duration:7s">World events</span></div><div class="chipx fx" style="--x:52%;--y:12%;--d:0.64s"><span class="k" style="animation-delay:-3.4s;animation-duration:8s">Investor sentiment</span></div><div class="chipx fx" style="--x:74%;--y:8%;--d:0.71s"><span class="k" style="animation-delay:-5.1s;animation-duration:9s">Company profits</span></div><div class="chipx fx" style="--x:91%;--y:15%;--d:0.78s"><span class="k" style="animation-delay:-6.8s;animation-duration:6s">Interest rates</span></div><div class="chipx fx" style="--x:6%;--y:33%;--d:0.85s"><span class="k" style="animation-delay:-1.5s;animation-duration:7s">Jobs</span></div><div class="chipx fx" style="--x:95%;--y:37%;--d:0.92s"><span class="k" style="animation-delay:-3.2s;animation-duration:8s">Inflation</span></div><div class="chipx fx" style="--x:8%;--y:55%;--d:0.99s"><span class="k" style="animation-delay:-4.9s;animation-duration:9s">Laws and regulations</span></div><div class="chipx fx" style="--x:93%;--y:58%;--d:1.06s"><span class="" style="animation-delay:-6.6s;animation-duration:6s">Elections</span></div><div class="chipx fx" style="--x:5%;--y:77%;--d:1.13s"><span class="" style="animation-delay:-1.3s;animation-duration:7s">Oil prices</span></div><div class="chipx fx" style="--x:24%;--y:88%;--d:1.20s"><span class="" style="animation-delay:-3.0s;animation-duration:8s">Tariffs</span></div><div class="chipx fx" style="--x:47%;--y:91%;--d:1.27s"><span class="" style="animation-delay:-4.7s;animation-duration:9s">Headlines</span></div><div class="chipx fx" style="--x:70%;--y:87%;--d:1.34s"><span class="" style="animation-delay:-6.4s;animation-duration:6s">Rumors</span></div><div class="chipx fx" style="--x:91%;--y:80%;--d:1.41s"><span class="" style="animation-delay:-1.1s;animation-duration:7s">Wars</span></div><div class="chipx fx" style="--x:19%;--y:28%;--d:1.48s"><span class="" style="animation-delay:-2.8s;animation-duration:8s">Pandemics</span></div><div class="chipx fx" style="--x:81%;--y:27%;--d:1.55s"><span class="k" style="animation-delay:-4.5s;animation-duration:9s">The Fed</span></div><div class="chipx fx" style="--x:16%;--y:72%;--d:1.62s"><span class="" style="animation-delay:-6.2s;animation-duration:6s">Earnings season</span></div><div class="chipx fx" style="--x:84%;--y:72%;--d:1.69s"><span class="" style="animation-delay:-0.9s;animation-duration:7s">One CEO's comment</span></div><div class="chipx fx" style="--x:38%;--y:20%;--d:1.76s"><span class="" style="animation-delay:-2.6s;animation-duration:8s">Weather</span></div><div class="chipx fx" style="--x:64%;--y:22%;--d:1.83s"><span class="" style="animation-delay:-4.3s;animation-duration:9s">New technology</span></div><div class="chipx fx" style="--x:36%;--y:80%;--d:1.90s"><span class="" style="animation-delay:-6.0s;animation-duration:6s">Wages</span></div><div class="chipx fx" style="--x:60%;--y:78%;--d:1.97s"><span class="" style="animation-delay:-0.7s;animation-duration:7s">Spending</span></div></div>
+  <div class="anyc">
+    <div class="kicker fx">So what moves the market?</div>
+    <p class="pre fx" style="--d:.15s">Basically</p>
+    <h2 class="split mega">anything &amp; <em>everything.</em></h2>
   </div>
-  <div class="side">
-    <div class="card call fx" style="--d:0.50s"><b>45%</b><span>of families have <strong>no retirement account</strong> at all.</span></div>
-    <div class="card call fx" style="--d:0.57s"><b>$5,000</b><span>The middle retirement balance across <strong>all</strong> families, counting the 45% with none.</span></div>
-    <div class="card call fx" style="--d:0.64s"><b>$840 a month</b><span>What $252,000 pays at a <strong>4% yearly draw.</strong></span></div>
-  </div></div>
-  <footer class="ft"><span>Investing 101</span><span class="src">Federal Reserve, 2025 Survey of Consumer Finances. Medians among families that hold each. Debt includes mortgages, cars, cards, and student loans.</span><span class="pn"></span></footer>
+  <footer class="ft"><span>Investing 101</span><span class="src"></span><span class="pn"></span></footer>
 </section>
 <section class="slide s-infl">
   <header class="hd"><div class="kicker fx">Inflation</div><h2 class="split">The quiet <em>money leak</em></h2></header>
@@ -932,6 +993,17 @@ function countUp(s) {
     leave(); draw(+b.dataset.n);
   }));
   draw(40);
+})();
+
+// live debt clocks: value = snapshot + rate x seconds since the snapshot
+const ticks = [...document.querySelectorAll('.tick')];
+if (ticks.length) (function loop() {
+  const now = Date.now();
+  ticks.forEach(el => {
+    const v = +el.dataset.v + +el.dataset.r * (now - +el.dataset.t0) / 1000, dec = +el.dataset.dec;
+    el.textContent = '$' + v.toLocaleString('en-US', { minimumFractionDigits: dec, maximumFractionDigits: dec });
+  });
+  setTimeout(loop, 90);
 })();
 
 function fit() {
