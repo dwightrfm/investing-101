@@ -127,7 +127,7 @@ svg .an2{font-family:var(--sans);font-size:17px;fill:var(--mut)}
 .tarea{fill:var(--tea);opacity:.08}
 
 /* 2 disclaimer */
-.s-disc .bd{grid-template-rows:auto 1fr}
+.s-disc .bd{grid-template-rows:auto 1fr auto}
 .s-disc blockquote{margin:0;padding:6px 0 6px 34px;border-left:4px solid var(--tea);font-family:var(--serif);font-size:34px;line-height:1.42;color:var(--ink)}
 .s-disc .dgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px 56px;align-content:start;padding-top:8px}
 .s-disc .dgrid p{margin:0;font-size:23px;line-height:1.45;color:var(--mut)}
@@ -421,6 +421,18 @@ svg .an2{font-family:var(--sans);font-size:17px;fill:var(--mut)}
 .s-mkt .ir b{font-size:32px}
 .s-mkt .ir span{font-size:23px}
 
+.s-disc .nophoto{font-size:27px;gap:18px}
+.s-disc .nophoto .ic{width:38px;height:38px}
+.s-mkt .ir b{font-size:28px}
+
+.s-disc blockquote{font-size:36px}
+.s-disc .dgrid{gap:18px 60px;padding-top:6px}
+.s-disc .dgrid p{font-size:24px}
+.s-mkt .ir{flex-direction:column;align-items:flex-start;justify-content:center;gap:2px;padding:12px 0}
+.s-mkt .ir b{font-size:27px}
+.s-mkt .ir span{text-align:left;font-size:21px}
+.s-mkt .idx p{font-size:24px;margin-bottom:8px}
+
 #bar{position:fixed;left:0;right:0;bottom:0;height:4px;background:transparent;z-index:5}
 #bar i{display:block;height:100%;background:var(--tea);width:0;transition:width .4s var(--ease)}
 
@@ -448,7 +460,6 @@ svg .an2{font-family:var(--sans);font-size:17px;fill:var(--mut)}
   <div class="tl">
     <div class="kicker fx">A beginner's series on saving and investing</div>
     <h1 class="split">Investing <em>101</em></h1>
-    <p class="sub fx" style="--d:.16s">Basic concepts, plain language, real numbers.</p>
     <div class="handle fx" style="--d:.24s"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle class="dt" cx="17.3" cy="6.7" r="1.1"/></svg>@oliviasulawang</div>
   </div>
   <figure class="tg fx" style="--d:.2s">
@@ -456,13 +467,9 @@ svg .an2{font-family:var(--sans);font-size:17px;fill:var(--mut)}
       <path class="tarea" d="M20.0 448.7 L38.0 432.4 L56.0 427.6 L74.0 412.9 L92.0 386.7 L110.0 389.7 L128.0 364.3 L146.0 357.3 L164.0 348.2 L182.0 346.9 L200.0 316.5 L218.0 296.9 L236.0 269.4 L254.0 245.5 L272.0 227.3 L290.0 236.4 L308.0 248.4 L326.0 272.2 L344.0 248.2 L362.0 238.4 L380.0 233.8 L398.0 219.8 L416.0 214.7 L434.0 258.8 L452.0 236.4 L470.0 223.0 L488.0 221.0 L506.0 206.9 L524.0 180.2 L542.0 167.9 L560.0 166.6 L578.0 155.9 L596.0 137.1 L614.0 141.3 L632.0 115.2 L650.0 99.1 L668.0 75.1 L686.0 94.1 L704.0 71.9 L722.0 50.6 L740.0 34.9 L740.0 470 L20.0 470 Z"/>
       <path class="tline draw" pathLength="1" d="M20.0 448.7 L38.0 432.4 L56.0 427.6 L74.0 412.9 L92.0 386.7 L110.0 389.7 L128.0 364.3 L146.0 357.3 L164.0 348.2 L182.0 346.9 L200.0 316.5 L218.0 296.9 L236.0 269.4 L254.0 245.5 L272.0 227.3 L290.0 236.4 L308.0 248.4 L326.0 272.2 L344.0 248.2 L362.0 238.4 L380.0 233.8 L398.0 219.8 L416.0 214.7 L434.0 258.8 L452.0 236.4 L470.0 223.0 L488.0 221.0 L506.0 206.9 L524.0 180.2 L542.0 167.9 L560.0 166.6 L578.0 155.9 L596.0 137.1 L614.0 141.3 L632.0 115.2 L650.0 99.1 L668.0 75.1 L686.0 94.1 L704.0 71.9 L722.0 50.6 L740.0 34.9"/>
       <line class="grid" x1="20" x2="740" y1="470" y2="470"/>
-      <text class="ax" x="20" y="504">1986</text><text class="ax" x="740" y="504" text-anchor="end">2025</text>
     </svg>
-    <figcaption>Growth of $10,000 in the S&amp;P 500, 1986 to 2025 (log scale)</figcaption>
-    <div class="chip c1 float"><b>33 of 40</b>years ended up</div>
-    <div class="chip c2 float" style="animation-delay:-3s"><b>$769K</b>from $10,000 in 1986</div>
   </figure>
-  <footer class="ft"><span></span><span class="src"></span><span>@oliviasulawang · 1</span></footer>
+  <footer class="ft"><span></span><span class="src"></span><span class="pn"></span></footer>
 </section>
 <section class="slide s-disc">
   <header class="hd"><div class="kicker fx">Please read</div><h2 class="split">Important <em>disclaimer</em></h2></header>
@@ -472,48 +479,43 @@ svg .an2{font-family:var(--sans);font-size:17px;fill:var(--mut)}
     <p class="fx" style="--d:0.30s"><b>Education only.</b> This series is for general educational purposes. It is not investment, tax, legal, or accounting advice, and it is not an offer to buy or sell any security.</p>
     <p class="fx" style="--d:0.37s"><b>Examples are hypothetical.</b> Illustrations do not represent any specific investment and do not include fees, expenses, or taxes, which would lower results.</p>
     <p class="fx" style="--d:0.44s"><b>Investing involves risk.</b> All investments can lose value, including the money you put in. Past performance does not guarantee future results.</p>
-    <p class="fx" style="--d:0.51s"><b>Indexes are not investments.</b> Index returns are shown for illustration. Indexes are unmanaged, and you cannot invest in one directly.</p>
+    <p class="fx" style="--d:0.51s"><b>Indices are not investments.</b> Index returns are shown for illustration. Indices are unmanaged, and you cannot invest in one directly.</p>
     <p class="fx" style="--d:0.58s"><b>Data can change.</b> Figures come from sources believed to be reliable, including the Federal Reserve and published S&amp;P 500 returns, but accuracy is not guaranteed.</p>
     <p class="fx" style="--d:0.65s"><b>Your situation is unique.</b> Before making any financial decision, talk with a qualified, licensed professional who knows your full picture.</p>
-  </div></div>
-  <footer class="ft"><span>Investing 101</span><span class="src"></span><span>@oliviasulawang · 2</span></footer>
+  </div>
+  <div class="band nophoto fx" style="--d:.75s"><svg class="ic" viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/><path d="M3 3l18 18"/></svg><span><b>Please do not take photos or recordings.</b> This presentation is for your eyes only.</span></div></div>
+  <footer class="ft"><span>Investing 101</span><span class="src"></span><span class="pn"></span></footer>
 </section>
 <section class="slide s-scope">
   <header class="hd"><div class="kicker fx">About this series</div><h2 class="split">What we will and <em>won't</em> cover</h2></header>
   <div class="bd">
-  <div class="card col fx" style="--d:.15s"><div class="ch ok">This series will cover</div><ul><li class="fx" style="--d:0.30s"><svg class="ic ok" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg><span>Basic financial concepts</span></li><li class="fx" style="--d:0.37s"><svg class="ic ok" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg><span>An overview of the principles of saving and investing</span></li><li class="fx" style="--d:0.44s"><svg class="ic ok" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg><span>Questions to consider as you begin your saving and investing journey</span></li><li class="fx" style="--d:0.51s"><svg class="ic ok" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg><span>General concepts involving paper assets: stocks, bonds, and cash</span></li></ul></div>
-  <div class="card col fx" style="--d:.25s"><div class="ch no">This series will not cover</div><ul><li class="fx" style="--d:0.60s"><svg class="ic no" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7"/></svg><span>Specific financial products</span></li><li class="fx" style="--d:0.67s"><svg class="ic no" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7"/></svg><span>Investment recommendations</span></li><li class="fx" style="--d:0.74s"><svg class="ic no" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7"/></svg><span>Non-paper assets like real estate, gold, and crypto</span></li></ul></div></div>
-  <footer class="ft"><span>Investing 101</span><span class="src"></span><span>@oliviasulawang · 3</span></footer>
+  <div class="card col fx" style="--d:.15s"><div class="ch ok">This series will cover</div><ul><li class="fx" style="--d:0.30s"><svg class="ic ok" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg><span>Basic financial concepts</span></li><li class="fx" style="--d:0.37s"><svg class="ic ok" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg><span>An overview of the principles of saving and investing</span></li><li class="fx" style="--d:0.44s"><svg class="ic ok" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg><span>Questions to consider as you begin your saving and investing journey</span></li><li class="fx" style="--d:0.51s"><svg class="ic ok" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg><span>General concepts involving paper assets</span></li></ul></div>
+  <div class="card col fx" style="--d:.25s"><div class="ch no">This series will not cover</div><ul><li class="fx" style="--d:0.60s"><svg class="ic no" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7"/></svg><span>Specific financial products</span></li><li class="fx" style="--d:0.67s"><svg class="ic no" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7"/></svg><span>Investment recommendations</span></li><li class="fx" style="--d:0.74s"><svg class="ic no" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7"/></svg><span>Non-paper assets</span></li></ul></div></div>
+  <footer class="ft"><span>Investing 101</span><span class="src"></span><span class="pn"></span></footer>
 </section>
 <section class="slide s-mkt">
   <header class="hd"><div class="kicker fx">The basics</div><h2 class="split">What is the <em>“stock market”</em>?</h2></header>
   <div class="bd">
-  <p class="lead fx" style="--d:.15s">A marketplace where people buy and sell <b>shares</b>: small pieces of ownership in public companies.</p>
+  <p class="lead fx" style="--d:.15s">A marketplace where people buy and sell <b>shares</b> (ownership in public companies).</p>
   <div class="row">
     <div class="card flow fx" style="--d:.25s">
       <div class="node"><b>Companies</b><span>Sell shares to raise money to grow</span></div>
       <svg class="arr" viewBox="0 0 80 40"><path d="M4 20h66M58 9l12 11-12 11"/></svg>
-      <div class="node mid"><b>Exchanges</b><span>NYSE, Nasdaq. Open every business day</span></div>
+      <div class="node mid"><b>Exchanges</b><span>NYSE, Nasdaq, open every business day</span></div>
       <svg class="arr" viewBox="0 0 80 40"><path d="M76 20H10M22 9L10 20l12 11"/></svg>
       <div class="node"><b>Investors</b><span>Buy shares to own part of future profits</span></div>
       <p class="note">Every trade has a buyer and a seller. The price is where they agree.</p>
     </div>
     <div class="card idx fx" style="--d:.35s">
       <div class="ch">When the news says “the market”</div>
-      <p>It usually means an <b>index</b>: a basket that tracks a group of stocks.</p>
-      <div class="ir"><b>S&amp;P 500</b><span>500 large U.S. companies</span></div>
-      <div class="ir"><b>Dow Jones</b><span>30 large U.S. companies</span></div>
-      <div class="ir"><b>Nasdaq Composite</b><span>3,000+ companies, heavy in tech</span></div>
+      <p>It's just a <b>stock index</b>: a group of securities tracked together.</p>
+      <div class="ir"><b>S&amp;P 500</b><span>$22.7 billion+</span></div>
+      <div class="ir"><b>Dow Jones Industrial Average</b><span>30 blue chip, large cap companies</span></div>
+      <div class="ir"><b>Nasdaq Composite</b><span>3,000+ companies</span></div>
+      <div class="ir"><b>Russell 2000</b><span>2,000 small cap companies</span></div>
     </div>
   </div></div>
-  <footer class="ft"><span>Investing 101</span><span class="src"></span><span>@oliviasulawang · 4</span></footer>
-</section>
-<section class="slide s-moves">
-  <header class="hd"><div class="kicker fx">The basics</div><h2 class="split">What makes it go <em>up or down?</em></h2></header>
-  <div class="bd">
-  <div class="grid6"><div class="card mv fx" style="--d:0.15s"><svg class="ic" viewBox="0 0 24 24"><path d="M4 19h16M7 16v-4M12 16V8M17 16v-7"/></svg><b>Company profits</b><span>Growing profits push prices up over time. Shrinking profits pull them down.</span></div><div class="card mv fx" style="--d:0.22s"><svg class="ic" viewBox="0 0 24 24"><circle cx="7.5" cy="7.5" r="2.5"/><circle cx="16.5" cy="16.5" r="2.5"/><path d="M18 6L6 18"/></svg><b>Interest rates</b><span>Higher rates make borrowing cost more and bonds more attractive. Stocks often dip.</span></div><div class="card mv fx" style="--d:0.29s"><svg class="ic" viewBox="0 0 24 24"><path d="M3 20h18M5 20V10l4-3 4 3v10M13 20v-7h6v7"/></svg><b>The economy</b><span>Jobs, wages, and spending. A strong economy usually means stronger companies.</span></div><div class="card mv fx" style="--d:0.36s"><svg class="ic" viewBox="0 0 24 24"><path d="M12 4v16M8 8h6a3 3 0 010 6h-4a3 3 0 000 6h6"/></svg><b>Inflation</b><span>Fast-rising prices squeeze profits and push rates higher.</span></div><div class="card mv fx" style="--d:0.43s"><svg class="ic" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 9h8M8 13h8M8 16h5"/></svg><b>World events</b><span>Elections, wars, pandemics, new laws. Surprises move prices fast.</span></div><div class="card mv fx" style="--d:0.50s"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M9 10h.01M15 10h.01M8.5 14.5c2 2 5 2 7 0"/></svg><b>Investor emotion</b><span>Fear and greed. People often sell in a panic and buy in a frenzy.</span></div></div>
-  <div class="band fx" style="--d:.7s"><div><span class="kk">Short run</span>News and emotion</div><div class="vs"></div><div><span class="kk">Long run</span>Company profits</div></div></div>
-  <footer class="ft"><span>Investing 101</span><span class="src"></span><span>@oliviasulawang · 5</span></footer>
+  <footer class="ft"><span>Investing 101</span><span class="src"></span><span class="pn"></span></footer>
 </section>
 <section class="slide s-forty">
   <header class="hd"><div class="kicker fx">The S&amp;P 500</div><h2 class="split">40 years of <em>ups and downs</em></h2></header>
@@ -524,7 +526,14 @@ svg .an2{font-family:var(--sans);font-size:17px;fill:var(--mut)}
     <div class="card st fx" style="--d:0.47s"><span class="kk">Average growth</span><b>11.5% a year</b><span>Compounded, with dividends reinvested</span></div>
     <div class="card st hi fx" style="--d:0.54s"><span class="kk">$10,000 in 1986</span><b>$769K</b><span>by the end of 2025</span></div>
   </div></div>
-  <footer class="ft"><span>Investing 101</span><span class="src">S&amp;P 500 total return. You cannot invest directly in an index. Past performance does not guarantee future results.</span><span>@oliviasulawang · 6</span></footer>
+  <footer class="ft"><span>Investing 101</span><span class="src">S&amp;P 500 total return. You cannot invest directly in an index. Past performance does not guarantee future results.</span><span class="pn"></span></footer>
+</section>
+<section class="slide s-moves">
+  <header class="hd"><div class="kicker fx">The basics</div><h2 class="split">What makes it go <em>up or down?</em></h2></header>
+  <div class="bd">
+  <div class="grid6"><div class="card mv fx" style="--d:0.15s"><svg class="ic" viewBox="0 0 24 24"><path d="M4 19h16M7 16v-4M12 16V8M17 16v-7"/></svg><b>Company profits</b><span>Growing profits push prices up over time. Shrinking profits pull them down.</span></div><div class="card mv fx" style="--d:0.22s"><svg class="ic" viewBox="0 0 24 24"><circle cx="7.5" cy="7.5" r="2.5"/><circle cx="16.5" cy="16.5" r="2.5"/><path d="M18 6L6 18"/></svg><b>Interest rates</b><span>Higher rates make borrowing cost more and bonds more attractive. Stocks often dip.</span></div><div class="card mv fx" style="--d:0.29s"><svg class="ic" viewBox="0 0 24 24"><path d="M3 20h18M5 20V10l4-3 4 3v10M13 20v-7h6v7"/></svg><b>The economy</b><span>Jobs, wages, and spending. A strong economy usually means stronger companies.</span></div><div class="card mv fx" style="--d:0.36s"><svg class="ic" viewBox="0 0 24 24"><path d="M12 4v16M8 8h6a3 3 0 010 6h-4a3 3 0 000 6h6"/></svg><b>Inflation</b><span>Fast-rising prices squeeze profits and push rates higher.</span></div><div class="card mv fx" style="--d:0.43s"><svg class="ic" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 9h8M8 13h8M8 16h5"/></svg><b>World events</b><span>Elections, wars, pandemics, new laws. Surprises move prices fast.</span></div><div class="card mv fx" style="--d:0.50s"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M9 10h.01M15 10h.01M8.5 14.5c2 2 5 2 7 0"/></svg><b>Investor emotion</b><span>Fear and greed. People often sell in a panic and buy in a frenzy.</span></div></div>
+  <div class="band fx" style="--d:.7s"><div><span class="kk">Short run</span>News and emotion</div><div class="vs"></div><div><span class="kk">Long run</span>Company profits</div></div></div>
+  <footer class="ft"><span>Investing 101</span><span class="src"></span><span class="pn"></span></footer>
 </section>
 <section class="slide s-stand">
   <header class="hd"><div class="kicker fx">Where we stand</div><h2 class="split">Owing vs. <em>saving</em></h2></header>
@@ -554,7 +563,7 @@ svg .an2{font-family:var(--sans);font-size:17px;fill:var(--mut)}
     <div class="card call fx" style="--d:0.57s"><b>$5,000</b><span>The middle retirement balance across <strong>all</strong> families, counting the 45% with none.</span></div>
     <div class="card call fx" style="--d:0.64s"><b>$840 a month</b><span>What $252,000 pays at a <strong>4% yearly draw.</strong></span></div>
   </div></div>
-  <footer class="ft"><span>Investing 101</span><span class="src">Federal Reserve, 2025 Survey of Consumer Finances. Medians among families that hold each. Debt includes mortgages, cars, cards, and student loans.</span><span>@oliviasulawang · 7</span></footer>
+  <footer class="ft"><span>Investing 101</span><span class="src">Federal Reserve, 2025 Survey of Consumer Finances. Medians among families that hold each. Debt includes mortgages, cars, cards, and student loans.</span><span class="pn"></span></footer>
 </section>
 <section class="slide s-infl">
   <header class="hd"><div class="kicker fx">Inflation</div><h2 class="split">The quiet <em>money leak</em></h2></header>
@@ -573,7 +582,7 @@ svg .an2{font-family:var(--sans);font-size:17px;fill:var(--mut)}
     <div class="ch fx" style="--d:.5s">What moves it</div>
     <div class="card mvs fx" style="--d:0.55s"><b>Demand</b><span>More spending chases the same goods.</span></div><div class="card mvs fx" style="--d:0.62s"><b>Costs</b><span>Energy, materials, and wages go up.</span></div><div class="card mvs fx" style="--d:0.69s"><b>The Fed</b><span>Interest rates and money supply.</span></div><div class="card mvs fx" style="--d:0.76s"><b>Government spending</b><span>More dollars in the system.</span></div><div class="card mvs fx" style="--d:0.83s"><b>Expectations</b><span>Expect higher prices, and they show up.</span></div>
   </div></div>
-  <footer class="ft"><span>Investing 101</span><span class="src"></span><span>@oliviasulawang · 8</span></footer>
+  <footer class="ft"><span>Investing 101</span><span class="src"></span><span class="pn"></span></footer>
 </section>
 <section class="slide s-comp">
   <header class="hd"><div class="kicker fx">Compound growth</div><h2 class="split">Time is the <em>multiplier</em></h2><p class="sub fx" style="--d:.12s">Growth earns growth. The earlier you start, the harder it works.</p></header>
@@ -588,7 +597,7 @@ svg .an2{font-family:var(--sans);font-size:17px;fill:var(--mut)}
     <div class="card call fx" style="--d:0.47s"><span class="kk">Starts at 35</span><b class="g">$366K</b><span>Puts in <strong>$108,000</strong></span></div>
     <div class="card call hi fx" style="--d:0.54s"><span>Waiting 10 years cost</span><b>$421K</b></div>
   </div></div>
-  <footer class="ft"><span>Investing 101</span><span class="src">Hypothetical: $300 a month at 7% a year, compounded monthly, to age 65. Not a specific investment. No fees or taxes.</span><span>@oliviasulawang · 9</span></footer>
+  <footer class="ft"><span>Investing 101</span><span class="src">Hypothetical: $300 a month at 7% a year, compounded monthly, to age 65. Not a specific investment. No fees or taxes.</span><span class="pn"></span></footer>
 </section>
 <section class="slide s-dca">
   <header class="hd"><div class="kicker fx">Dollar cost averaging</div><h2 class="split">Same amount, <em>every month</em></h2></header>
@@ -604,7 +613,7 @@ svg .an2{font-family:var(--sans);font-size:17px;fill:var(--mut)}
     <div class="band sm fx" style="--d:.8s">The price ended right where it started. Your $600 is worth <b>$817.</b></div>
   </div>
   <div class="card plot fx" style="--d:.2s"><svg viewBox="0 0 900 600"><text class="kk2" x="20" y="34">Price per share</text><path class="ln blu draw" pathLength="1" style="--d:.3s" d="M90.0 113.3 L234.0 146.7 L378.0 196.7 L522.0 180.0 L666.0 146.7 L810.0 113.3"/><circle class="pt blu" cx="90" cy="113.3" r="6"/><text class="vl" x="90" y="95.3" text-anchor="middle">$10</text><circle class="pt blu" cx="234" cy="146.7" r="6"/><text class="vl" x="234" y="128.7" text-anchor="middle">$8</text><circle class="pt blu" cx="378" cy="196.7" r="6"/><text class="vl" x="378" y="178.7" text-anchor="middle">$5</text><circle class="pt blu" cx="522" cy="180.0" r="6"/><text class="vl" x="522" y="162.0" text-anchor="middle">$6</text><circle class="pt blu" cx="666" cy="146.7" r="6"/><text class="vl" x="666" y="128.7" text-anchor="middle">$8</text><circle class="pt blu" cx="810" cy="113.3" r="6"/><text class="vl" x="810" y="95.3" text-anchor="middle">$10</text><text class="kk2" x="20" y="350">Shares your $100 buys</text><rect class="sb gr" style="--d:0.50s" x="52" y="460.0" width="76" height="100.0" rx="4"/><text class="vl" x="90" y="450.0" text-anchor="middle">10.0</text><text class="ax" x="90" y="592" text-anchor="middle">Jan</text><rect class="sb gr" style="--d:0.58s" x="196" y="435.0" width="76" height="125.0" rx="4"/><text class="vl" x="234" y="425.0" text-anchor="middle">12.5</text><text class="ax" x="234" y="592" text-anchor="middle">Feb</text><rect class="sb gr" style="--d:0.66s" x="340" y="360.0" width="76" height="200.0" rx="4"/><text class="vl" x="378" y="350.0" text-anchor="middle">20.0</text><text class="ax" x="378" y="592" text-anchor="middle">Mar</text><rect class="sb gr" style="--d:0.74s" x="484" y="393.3" width="76" height="166.7" rx="4"/><text class="vl" x="522" y="383.3" text-anchor="middle">16.7</text><text class="ax" x="522" y="592" text-anchor="middle">Apr</text><rect class="sb gr" style="--d:0.82s" x="628" y="435.0" width="76" height="125.0" rx="4"/><text class="vl" x="666" y="425.0" text-anchor="middle">12.5</text><text class="ax" x="666" y="592" text-anchor="middle">May</text><rect class="sb gr" style="--d:0.90s" x="772" y="460.0" width="76" height="100.0" rx="4"/><text class="vl" x="810" y="450.0" text-anchor="middle">10.0</text><text class="ax" x="810" y="592" text-anchor="middle">Jun</text></svg></div></div>
-  <footer class="ft"><span>Investing 101</span><span class="src">Hypothetical: $100 a month for 6 months. Dollar cost averaging does not guarantee a profit or protect against loss in a falling market.</span><span>@oliviasulawang · 10</span></footer>
+  <footer class="ft"><span>Investing 101</span><span class="src">Hypothetical: $100 a month for 6 months. Dollar cost averaging does not guarantee a profit or protect against loss in a falling market.</span><span class="pn"></span></footer>
 </section>
 <section class="slide s-dca2">
   <header class="hd"><div class="kicker fx">Dollar cost averaging</div><h2 class="split">Keep buying through <em>the storms</em></h2></header>
@@ -619,7 +628,7 @@ svg .an2{font-family:var(--sans);font-size:17px;fill:var(--mut)}
       <path class="ln gry thin draw" pathLength="1" style="--d:.4s" d="M100.0 390.0 L162.2 387.5 L224.5 385.1 L286.7 382.6 L349.0 380.1 L411.2 377.7 L473.4 375.2 L535.7 372.7 L597.9 370.3 L660.2 367.8 L722.4 365.3 L784.6 362.9 L846.9 360.4 L909.1 357.9 L971.4 355.5 L1033.6 353.0 L1095.8 350.5 L1158.1 348.1 L1220.3 345.6 L1282.6 343.1 L1344.8 340.7 L1407.0 338.2 L1469.3 335.7 L1531.5 333.3 L1593.8 330.8 L1656.0 328.3"/>
       <path class="ln tea draw" pathLength="1" style="--d:.5s" d="M100.0 390.0 L162.2 387.8 L224.5 386.4 L286.7 382.2 L349.0 378.6 L411.2 375.4 L473.4 370.3 L535.7 366.6 L597.9 373.7 L660.2 366.3 L722.4 359.9 L784.6 356.7 L846.9 348.5 L909.1 331.8 L971.4 321.0 L1033.6 317.6 L1095.8 306.2 L1158.1 284.9 L1220.3 287.1 L1282.6 251.5 L1344.8 223.1 L1407.0 172.0 L1469.3 209.4 L1531.5 158.8 L1593.8 97.9 L1656.0 42.8"/><circle class="pt rst" cx="224.5" cy="386.4" r="7"/><text class="an" x="224.5" y="366.4" text-anchor="middle">Dot-com bust</text><circle class="pt rst" cx="597.9" cy="373.7" r="7"/><text class="an" x="597.9" y="353.7" text-anchor="middle">Financial crisis</text><circle class="pt rst" cx="1469.3" cy="209.4" r="7"/><text class="an" x="1469.3" y="249.4" text-anchor="middle">Rate hikes</text>
       <text class="an2" x="1650.0" y="358.3" text-anchor="end">What you put in</text></svg></div></div>
-  <footer class="ft"><span>Investing 101</span><span class="src">S&amp;P 500 total returns 2001 to 2025, modeled as $6,000 invested at the start of each year. No fees or taxes. Past performance does not guarantee future results.</span><span>@oliviasulawang · 11</span></footer>
+  <footer class="ft"><span>Investing 101</span><span class="src">S&amp;P 500 total returns 2001 to 2025, modeled as $6,000 invested at the start of each year. No fees or taxes. Past performance does not guarantee future results.</span><span class="pn"></span></footer>
 </section>
 <section class="slide s-div">
   <header class="hd"><div class="kicker fx">Diversification</div><h2 class="split">Don't bet it all on <em>one thing</em></h2></header>
@@ -637,7 +646,7 @@ svg .an2{font-family:var(--sans);font-size:17px;fill:var(--mut)}
     </div>
     <div class="dec"><div class="ch">2000 to 2009, per year</div><div class="r2"><div><b class="dn">-0.9%</b><span>U.S. stocks</span></div><div><b class="up">+6.3%</b><span>U.S. bonds</span></div></div></div>
   </div></div>
-  <footer class="ft"><span>Investing 101</span><span class="src">Stocks: S&amp;P 500 total return. Bonds: Bloomberg U.S. Aggregate Bond Index. Diversification does not guarantee a profit or protect against loss.</span><span>@oliviasulawang · 12</span></footer>
+  <footer class="ft"><span>Investing 101</span><span class="src">Stocks: S&amp;P 500 total return. Bonds: Bloomberg U.S. Aggregate Bond Index. Diversification does not guarantee a profit or protect against loss.</span><span class="pn"></span></footer>
 </section>
 <section class="slide s-alloc">
   <header class="hd"><div class="kicker fx">Asset allocation</div><h2 class="split">How you <em>split it</em></h2><p class="sub fx" style="--d:.12s">Asset allocation is your mix of stocks, bonds, and cash. Diversification spreads money inside each one.</p></header>
@@ -656,7 +665,7 @@ svg .an2{font-family:var(--sans);font-size:17px;fill:var(--mut)}
       <div><svg viewBox="0 0 220 220"><g transform="rotate(-90 110 110)"><circle class="seg stk" cx="110" cy="110" r="80" stroke-dasharray="147.8 502.7" stroke-dashoffset="0.0"/><circle class="seg bnd" cx="110" cy="110" r="80" stroke-dasharray="298.6 502.7" stroke-dashoffset="-150.8"/><circle class="seg csh" cx="110" cy="110" r="80" stroke-dasharray="47.3 502.7" stroke-dashoffset="-452.4"/></g><text x="110" y="121" text-anchor="middle" class="dc">30/60</text></svg><b>Conservative</b><span>Shorter time, less swing</span></div>
     </div>
   </div></div>
-  <footer class="ft"><span>Investing 101</span><span class="src">Sample mixes are for illustration only, not recommendations. The right mix depends on your goals, time, and risk tolerance.</span><span>@oliviasulawang · 13</span></footer>
+  <footer class="ft"><span>Investing 101</span><span class="src">Sample mixes are for illustration only, not recommendations. The right mix depends on your goals, time, and risk tolerance.</span><span class="pn"></span></footer>
 </section>
 <section class="slide s-risk">
   <header class="hd"><div class="kicker fx">Risk tolerance</div><h2 class="split">How much swing <em>can you take?</em></h2></header>
@@ -672,7 +681,7 @@ svg .an2{font-family:var(--sans);font-size:17px;fill:var(--mut)}
     <div class="card call fx" style="--d:0.37s"><span class="kk tea">Ability</span><p class="t">How much you <b>can afford</b> to ride out.</p><span>Years until you need it, steady income, emergency fund.</span></div>
     <div class="band sm fx" style="--d:.6s">The best plan is the one <b>you'll stick with</b> in a bad year.</div>
   </div></div>
-  <footer class="ft"><span>Investing 101</span><span class="src"></span><span>@oliviasulawang · 14</span></footer>
+  <footer class="ft"><span>Investing 101</span><span class="src"></span><span class="pn"></span></footer>
 </section>
 <section class="slide s-tax">
   <header class="hd"><div class="kicker fx">Taxes</div><h2 class="split">3 ways your money <em>is taxed</em></h2></header>
@@ -690,7 +699,7 @@ svg .an2{font-family:var(--sans);font-size:17px;fill:var(--mut)}
       <div><b>Municipal bonds</b><span class="p">Interest free of federal tax</span><span class="c">Lower interest rates</span></div>
       <div><b>U.S. Treasuries</b><span class="p">Interest free of state &amp; local tax</span><span class="c">Still taxed federally</span></div>
     </div></div></div>
-  <footer class="ft"><span>Investing 101</span><span class="src">General education, not tax advice. Rules and limits change. Talk to a tax professional about your situation.</span><span>@oliviasulawang · 15</span></footer>
+  <footer class="ft"><span>Investing 101</span><span class="src">General education, not tax advice. Rules and limits change. Talk to a tax professional about your situation.</span><span class="pn"></span></footer>
 </section>
 <section class="slide s-seq">
   <header class="hd"><div class="kicker fx">Sequence of return risk</div><h2 class="split">Order <em>matters</em></h2><p class="sub fx" style="--d:.12s">Same 25 years of real returns. Two different orders. Both start with $500,000.</p></header>
@@ -704,7 +713,7 @@ svg .an2{font-family:var(--sans);font-size:17px;fill:var(--mut)}
     <div class="card call fx" style="--d:0.57s"><span class="kk">Just saving, no withdrawals</span><b>$4.14M</b><span>Both end the same. <strong>Order doesn't matter.</strong></span></div>
     <div class="card call hi fx" style="--d:0.64s"><span class="kk">Taking income?</span><b>Order is everything.</b></div>
   </div></div>
-  <footer class="ft"><span>Investing 101</span><span class="src">S&amp;P 500 total returns 2001 to 2025, dividends reinvested. Past performance does not guarantee future results.</span><span>@oliviasulawang · 16</span></footer>
+  <footer class="ft"><span>Investing 101</span><span class="src">S&amp;P 500 total returns 2001 to 2025, dividends reinvested. Past performance does not guarantee future results.</span><span class="pn"></span></footer>
 </section>
 <section class="slide s-seq2">
   <header class="hd"><div class="kicker fx">Sequence of return risk</div><h2 class="split">Same returns. <em>Different ending.</em></h2><p class="sub fx" style="--d:.12s">Both start with $500,000 and take out $25,000 the first year, raised 2.5% a year for inflation.</p></header>
@@ -720,7 +729,7 @@ svg .an2{font-family:var(--sans);font-size:17px;fill:var(--mut)}
     <div class="card call hi fx" style="--d:0.57s"><div class="who"><b class="tb">B</b><span class="kk">Backward</span></div><b>$2.19M left</b><span>Good years came first and built a cushion.</span></div>
     <div class="band sm fx" style="--d:.8s">The first 5 to 10 years of retirement carry <b>the most risk.</b></div>
   </div></div>
-  <footer class="ft"><span>Investing 101</span><span class="src">Hypothetical. S&amp;P 500 total returns 2001 to 2025 (A) and the same returns in reverse (B). Withdrawals at the start of each year. No fees or taxes.</span><span>@oliviasulawang · 17</span></footer>
+  <footer class="ft"><span>Investing 101</span><span class="src">Hypothetical. S&amp;P 500 total returns 2001 to 2025 (A) and the same returns in reverse (B). Withdrawals at the start of each year. No fees or taxes.</span><span class="pn"></span></footer>
 </section>
 <section class="slide s-plan">
   <header class="hd"><div class="kicker fx">Your next step</div><h2 class="split">The value of having <em>a plan</em></h2></header>
@@ -736,7 +745,7 @@ svg .an2{font-family:var(--sans);font-size:17px;fill:var(--mut)}
     <div class="ci"><svg class="ic" viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg><div><span class="kk">Cell</span><b>(310) 982-0073</b></div></div>
     <div class="ci"><svg class="ic" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1"/></svg><div><span class="kk">Instagram</span><b>@oliviasulawang</b></div></div>
   </div></div>
-  <footer class="ft"><span>Investing 101</span><span class="src">For education only. Not investment, tax, or legal advice. Examples are hypothetical. Past performance does not guarantee future results.</span><span>@oliviasulawang · 18</span></footer>
+  <footer class="ft"><span>Investing 101</span><span class="src">For education only. Not investment, tax, or legal advice. Examples are hypothetical. Past performance does not guarantee future results.</span><span class="pn"></span></footer>
 </section>
 </div><div id="bar"><i></i></div>
 <script>const stage = document.getElementById('stage');
@@ -764,6 +773,8 @@ document.querySelectorAll('.split').forEach(el => {
   });
   walk(el);
 });
+
+slides.forEach((s, i) => { const pn = s.querySelector('.pn'); if (pn) pn.textContent = i + 1; });
 
 // numbers count up when their slide opens
 const NUMS = '.call>b,.st b,.tl b,.s-stand .bc span,.s-infl .ib span,.s-div .r2 b,.s-div .dv .v,.s-title .chip b,.s-plan .ci b.none';
