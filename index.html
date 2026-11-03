@@ -463,6 +463,11 @@ svg .an2{font-family:var(--sans);font-size:17px;fill:var(--mut)}
 
 .s-mkt .ir b small{font-size:20px;font-weight:500;color:var(--mut)}
 
+.s-forty .stats{gap:14px}
+.s-forty .st{padding:14px 24px}
+.s-forty .st b{font-size:38px;margin:2px 0 0}
+.s-forty .st span:last-child{font-size:18px}
+
 #bar{position:fixed;left:0;right:0;bottom:0;height:4px;background:transparent;z-index:5}
 #bar i{display:block;height:100%;background:var(--tea);width:0;transition:width .4s var(--ease)}
 
@@ -549,16 +554,18 @@ svg .an2{font-family:var(--sans);font-size:17px;fill:var(--mut)}
 <section class="slide s-forty">
   <header class="hd"><div class="kicker fx">The S&amp;P 500</div><h2 class="split">40 years of <em>ups and downs</em></h2></header>
   <div class="bd">
-  <div class="card plot int fx" id="sp" style="--d:.15s" data-sp='{"y":[1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],"r":[18.67,5.25,16.61,31.69,-3.1,30.47,7.62,10.08,1.32,37.58,22.96,33.36,28.58,21.04,-9.1,-11.89,-22.1,28.68,10.88,4.91,15.79,5.49,-37.0,26.46,15.06,2.11,16.0,32.39,13.69,1.38,11.96,21.83,-4.38,31.49,18.4,28.71,-18.11,26.29,25.02,17.88],"notes":[[1987,"1987 crash","Year still ended up","top"],[2020,"COVID, 2020","Fell 34%, ended up 18%","top"],[2001,"Dot-com bust","3 down years in a row","below"],[2008,"Financial crisis","Worst year: -37%","side"],[2022,"Rate hikes","-18%","below"]]}'>
-    <div class="ctop"><div class="ch">Yearly total return, <span id="sprange">1986 to 2025</span></div><div class="zoom"><span>Zoom</span><button data-n="5">5Y</button><button data-n="10">10Y</button><button data-n="20">20Y</button><button data-n="30">30Y</button><button data-n="40" class=on>All</button></div></div>
+  <div class="card plot int fx" id="sp" style="--d:.15s" data-sp='{"y":[1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],"r":[14.62,2.03,12.4,27.25,-6.56,26.31,4.46,7.06,-1.54,34.11,20.26,31.01,26.67,19.53,-10.14,-13.04,-23.37,26.38,8.99,3.0,13.62,3.53,-38.49,23.45,12.78,0.0,13.41,29.6,11.39,-0.73,9.54,19.42,-6.24,28.88,16.26,26.89,-19.44,24.23,23.31,16.39],"notes":[[1987,"1987 crash","Year still ended up","top"],[2020,"COVID, 2020","Fell 34%, ended up 16%","top"],[2001,"Dot-com bust","3 down years in a row","below"],[2008,"Financial crisis","Worst year: -38.5%","side"],[2022,"Rate hikes","-19%","below"]]}'>
+    <div class="ctop"><div class="ch">Yearly return, <span id="sprange">1986 to 2025</span></div><div class="zoom"><span>Zoom</span><button data-n="5">5Y</button><button data-n="10">10Y</button><button data-n="20">20Y</button><button data-n="30">30Y</button><button data-n="40" class=on>All</button></div></div>
     <div class="spwrap"><svg id="spsvg" viewBox="0 0 1240 540"></svg><div id="sptip"></div></div>
   </div>
   <div class="stats nocount">
     <div class="card st fx" style="--d:0.40s"><span class="kk">Up years</span><b id="spup">33 of 40</b><span id="spstreak">Longest down streak: 3 years</span></div>
-    <div class="card st fx" style="--d:0.47s"><span class="kk">Average growth</span><b id="spavg">11.5% a year</b><span>Compounded, with dividends reinvested</span></div>
-    <div class="card st hi fx" style="--d:0.54s"><span class="kk" id="spfrom">$10,000 in 1986</span><b id="spgrow">$769K</b><span>by the end of 2025</span></div>
+    <div class="card st fx" style="--d:0.47s"><span class="kk">Average growth</span><b id="spavg">11.5% a year</b><span>Compounded, price change only</span></div>
+    <div class="card st hi fx" style="--d:0.54s"><span class="kk" id="spfrom">$10,000 in 1986</span><b id="spgrow"></b><span>by the end of 2025</span></div>
+    <div class="card st fx" style="--d:0.61s"><span class="kk">Biggest S&amp;P 500 gain</span><b class="up" id="spbest"></b><span id="spbesty"></span></div>
+    <div class="card st fx" style="--d:0.68s"><span class="kk">Biggest S&amp;P 500 loss</span><b class="dn" id="spworst"></b><span id="spworsty"></span></div>
   </div></div>
-  <footer class="ft"><span>Investing 101</span><span class="src">S&amp;P 500 total return. Hover any bar to see its year. You cannot invest directly in an index. Past performance does not guarantee future results.</span><span class="pn"></span></footer>
+  <footer class="ft"><span>Investing 101</span><span class="src">S&amp;P 500 price return, dividends not included. Hover any bar to see its year. You cannot invest directly in an index. Past performance does not guarantee future results.</span><span class="pn"></span></footer>
 </section>
 <section class="slide s-moves">
   <header class="hd"><div class="kicker fx">The basics</div><h2 class="split">What makes it go <em>up or down?</em></h2></header>
@@ -853,6 +860,9 @@ function countUp(s) {
     $('spfrom').textContent = `$10,000 in ${ys[0]}`;
     $('spgrow').textContent = grow >= 1e6 ? `$${(grow / 1e6).toFixed(2)}M` : `$${Math.round(grow / 1000)}K`;
     $('sprange').textContent = `${ys[0]} to ${ys[n - 1]}`;
+    const bi = rs.indexOf(Math.max(...rs)), wi = rs.indexOf(Math.min(...rs));
+    $('spbest').textContent = pct(rs[bi]); $('spbesty').textContent = `in ${ys[bi]}`;
+    $('spworst').textContent = pct(rs[wi]); $('spworsty').textContent = `in ${ys[wi]}`;
     box.parentElement.querySelectorAll('.stats .st b').forEach(c => { c.classList.remove('pop'); void c.offsetWidth; c.classList.add('pop'); });
   }
 
